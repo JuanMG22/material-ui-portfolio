@@ -1,0 +1,12 @@
+body {
+  background: url(coffee-apple.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.fondoPortfolio {
+  background-image: linear-gradient(rgba(85, 17, 17, 0.5), rgba(85, 17, 17, 0.5) ),
+  url(portfolio-background.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
