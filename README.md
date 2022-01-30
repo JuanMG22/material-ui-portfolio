@@ -8,11 +8,11 @@ A portfolio single page application using React and Material UI
 
 Clone the repository using following command or download
 
-#### To install dependency
-
 ```
 git clone https://github.com/JuanMG22/material-ui-portfolio.git
 ```
+
+#### To install dependency
 
 ```
 npm install
