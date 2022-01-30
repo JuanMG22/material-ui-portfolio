@@ -9,4 +9,12 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  background-attachment: fixed;
+}
+.fondoContact {
+  background-image: linear-gradient(rgba(34, 51, 51, 0.9), rgba(34, 51, 51, 0.9)),
+  url(contact-background.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }

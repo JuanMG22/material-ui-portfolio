@@ -12,8 +12,8 @@ import { Fade } from "react-reveal";
 
 const useStyles = makeStyles((theme) => ({
   contactContainer: {
-    background: "#233",
     height: "100vh",
+    width: "100vw"
   },
   heading: {
     color: "tomato",
@@ -71,7 +71,7 @@ const InputField = withStyles({
 const Contact = () => {
   const classes = useStyles();
   return (
-    <Box component="div" className={classes.contactContainer}>
+    <Box component="div" className={`${classes.typedContainer} fondoContact`}>
       <Grid container justify="center">
         
         <Box component="form" method="POST" data-netlify="true" className={classes.form}>

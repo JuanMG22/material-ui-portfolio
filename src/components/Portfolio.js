@@ -43,7 +43,7 @@ const projects = [
     image: project1,
     code: "https://github.com/JuanMG22/Marty-Friedman-Website",
     demo: "https://juanmg22.github.io/Marty-Friedman-Website/",
-    delay: 100
+    delay: 150
   },
   {
     name: "High Gaming E-commerce",
@@ -51,7 +51,7 @@ const projects = [
     image: project2,
     code: "https://github.com/JuanMG22/High-Gaming",
     demo: "https://juanmg22.github.io/High-Gaming/",
-    delay: 200
+    delay: 250
   },
   {
     name: "Sre Consulting and Devops",
@@ -59,7 +59,7 @@ const projects = [
     image: project3,
     code: "https://github.com/xdie/webapp",
     demo: "https://sre.uy/SRE-website/",
-    delay: 300
+    delay: 350
   },
   {
     name: "Guitar Shop React E-commerce",
@@ -67,7 +67,7 @@ const projects = [
     image: project4,
     code: "https://github.com/JuanMG22/guitar-shop",
     demo: "https://guitar-shop-react.netlify.app/",
-    delay: 400
+    delay: 450
   }
 ];
 
@@ -113,7 +113,7 @@ const Portfolio = () => {
               params={{
                 "particles": {
                     "number": {
-                        "value": 50
+                        "value": 100
                     },
                     "size": {
                         "value": 3
