@@ -13,7 +13,7 @@ import { Fade } from "react-reveal";
 const useStyles = makeStyles((theme) => ({
   contactContainer: {
     height: "100vh",
-    width: "100vw"
+    width: "100vw",
   },
   heading: {
     color: "tomato",
@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
     left: "50%",
     transform: "translate(-50%, -50%)",
     position: "absolute",
+    zIndex: "999",
     width: "50vw"
   },
   input: {
@@ -41,6 +42,7 @@ const useStyles = makeStyles((theme) => ({
   },
   particlesCanvas: {
     position: "fixed",
+    height: "100vh",
     opacity: "1"
   },
 }));
@@ -118,6 +120,7 @@ const Contact = () => {
       </Grid>
 
       <Particles
+        canvasClassName={classes.particlesCanvas}
         params={{
           "particles": {
               "number": {

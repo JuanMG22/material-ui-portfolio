@@ -20,11 +20,13 @@ import Particles from "react-particles-js";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
-    height: "100%",
+    height: "100vh",
   },
   cardContainer: {
     maxWidth: 345,
     margin: "2.3rem auto",
+    overflow: "hidden",
+    transition: "ease all .3s"
   },
   iconBtn: {
     fontSize: "90%",
@@ -32,14 +34,15 @@ const useStyles = makeStyles((theme) => ({
   },
   particlesCanvas: {
     position: "fixed",
-    opacity: "0.5"
+    opacity: "0.5",
+    height: "100vh"
   },
 }));
 
 const projects = [
   {
     name: "Marty Friedman WebSite",
-    description: `Musical artist WebSite Project in HTML, CSS, SASS, Bootstrap & Vanilla JS. Layout with CSS Gird, Flexbox & animations with AOS`,
+    description: `Musical artist WebSite Project in HTML, CSS, SASS, Bootstrap & Vanilla JS. Layout with CSS Grid, Flexbox & animations with AOS`,
     image: project1,
     code: "https://github.com/JuanMG22/Marty-Friedman-Website",
     demo: "https://juanmg22.github.io/Marty-Friedman-Website/",
@@ -75,12 +78,57 @@ const Portfolio = () => {
   const classes = useStyles();
   return (
     <Box component="div" className={`${classes.typedContainer} fondoPortfolio`}>
+      <Particles
+          canvasClassName={classes.particlesCanvas}
+          params={{
+          "particles": {
+              "number": {
+                  "value": 300,
+                  "density": {
+                      "enable": true,
+                      "value_area": 1500
+                  }
+              },
+              "line_linked": {
+                  "enable": true,
+                  "opacity": 0.02
+              },
+              "move": {
+                  "random": true,
+                  "speed": 1
+              },
+              "size": {
+                  "value": 2
+              },
+              "opacity": {
+                  "anim": {
+                      "enable": true,
+                      "speed": 1,
+                      "opacity_min": 0.05
+                  }
+              }
+          },
+          "interactivity": {
+              "events": {
+                  "onclick": {
+                      "enable": true,
+                      "mode": "push"
+                  }
+              },
+              "modes": {
+                  "push": {
+                      "particles_nb": 1
+                  }
+              }
+          },
+          "retina_detect": true
+      }} />
       <Grid container justify="center">
         {/* Projects */}
         {projects.map((project, i) => (
-          <Grid item xs={12} sm={8} md={4} key={i}>
+          <Grid item xs={12} sm={8} md={6} lg={4} key={i}>
             <Fade duration={1000} delay={project.delay}>
-            <Card className={classes.cardContainer}>
+            <Card className={`${classes.cardContainer} cardContainer`}>
               <CardActionArea>
                 <CardMedia
                   component="img"
@@ -108,26 +156,6 @@ const Portfolio = () => {
               </CardActions>
             </Card>
             </Fade>
-            <Particles
-            canvasClassName={classes.particlesCanvas}
-              params={{
-                "particles": {
-                    "number": {
-                        "value": 100
-                    },
-                    "size": {
-                        "value": 3
-                    }
-                },
-                "interactivity": {
-                    "events": {
-                        "onhover": {
-                            "enable": true,
-                            "mode": "repulse"
-                        }
-                    }
-                }
-            }} />
           </Grid>
         ))}
       </Grid>
