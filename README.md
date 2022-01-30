@@ -11,6 +11,10 @@ Clone the repository using following command or download
 #### To install dependency
 
 ```
+git clone https://github.com/JuanMG22/material-ui-portfolio.git
+```
+
+```
 npm install
 ```
 
