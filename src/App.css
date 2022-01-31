@@ -9,7 +9,6 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  background-attachment: fixed;
   height: 100%;
 }
 
@@ -22,6 +21,7 @@ body {
   height: 93.2vh;
   z-index: 999;
 }
+
 
 @media all and (max-width: 768px) {
   .fondoPortfolio {
