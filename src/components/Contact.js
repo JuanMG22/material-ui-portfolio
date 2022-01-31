@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import TextField from "@material-ui/core/TextField";
@@ -9,6 +9,8 @@ import Button from "@material-ui/core/Button";
 import Send from "@material-ui/icons/Send";
 import Particles from "react-particles-js";
 import { Fade } from "react-reveal";
+
+import { Snackbar } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   contactContainer: {
@@ -43,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
   particlesCanvas: {
     position: "fixed",
     height: "100vh",
-    opacity: "1"
+    opacity: "0.9"
   },
 }));
 
@@ -72,25 +74,43 @@ const InputField = withStyles({
 
 const Contact = () => {
   const classes = useStyles();
+  const [open, setOpen] = useState(false);
+
+  const handleClick = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setOpen(false);
+  };
   return (
     <Box component="div" className={`${classes.typedContainer} fondoContact`}>
       <Grid container justify="center">
         
-        <Box component="form" method="POST" data-netlify="true" className={classes.form}>
+        <Box component="form" name="contact-form" method="POST" data-netlify="true" className={classes.form}>
           <Fade duration={1000}>
           <Typography variant="h5" className={classes.heading}>
             Hire or Contact me...
           </Typography>
+          <input type="hidden" name="form-name" value="contact-form" />
           <InputField
             fullWidth={true}
+            type="text"
             label="Name"
+            name="name"
             variant="outlined"
             inputProps={{ className: classes.input }}
             required
           />
           <InputField
             fullWidth={true}
+            type="email"
             label="Email"
+            name="email"
             variant="outlined"
             inputProps={{ className: classes.input }}
             className={classes.field}
@@ -99,6 +119,7 @@ const Contact = () => {
           <InputField
             fullWidth={true}
             label="Message"
+            name="message"
             variant="outlined"
             multiline
             rows={4}
@@ -107,6 +128,7 @@ const Contact = () => {
           />
           <div data-netlify-recaptcha="true"></div>
           <Button
+            onSubmit={handleClick}
             type="submit"
             variant="outlined"
             fullWidth={true}
@@ -117,6 +139,14 @@ const Contact = () => {
           </Button>
           </Fade>
         </Box>
+        <Button variant="outlined"  onClick={handleClick}>
+          modalll
+        </Button>
+          <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+            <alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
+              The message was sent!
+            </alert>
+          </Snackbar>
       </Grid>
 
       <Particles
