@@ -22,10 +22,8 @@ body {
   z-index: 999;
 }
 
-
 @media all and (max-width: 768px) {
   .fondoPortfolio {
     height: 219vh;
   }
-
 }

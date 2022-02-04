@@ -9,7 +9,6 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import GitHub from "@material-ui/icons/GitHub";
 
 import project1 from "../images/project1.png";
 import project2 from "../images/project2.png";
@@ -17,6 +16,7 @@ import project3 from "../images/project3.png";
 import project4 from "../images/project4.png";
 import { Fade } from "react-reveal";
 import Particles from "react-particles-js";
+import { Code, Link } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
@@ -147,10 +147,11 @@ const Portfolio = () => {
               </CardActionArea>
               <CardActions>
                 <Button href={project.code} target="_blank" rel="noopener noreferrer"  size="small" color="primary">
-                  <GitHub className={classes.iconBtn} />
+                  <Code className={classes.iconBtn} />
                   Code
                 </Button>
                 <Button href={project.demo} target="_blank"rel="noopener noreferrer" size="small" color="primary">
+                  <Link className={classes.iconBtn} />
                   Live Demo
                 </Button>
               </CardActions>
