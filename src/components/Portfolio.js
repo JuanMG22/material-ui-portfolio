@@ -14,6 +14,7 @@ import project1 from "../images/project1.png";
 import project2 from "../images/project2.png";
 import project3 from "../images/project3.png";
 import project4 from "../images/project4.png";
+import project5 from "../images/project5.png";
 import { Fade } from "react-reveal";
 import Particles from "react-particles-js";
 import { Code, Link } from "@material-ui/icons";
@@ -71,6 +72,14 @@ const projects = [
     code: "https://github.com/JuanMG22/guitar-shop",
     demo: "https://guitar-shop-react.netlify.app/",
     delay: 450
+  },
+  {
+    name: "Personal Portfolio",
+    description: `Developer Portfolio Project in React, using Material UI, React Particles Js, React Reveal, React Router DOM & more`,
+    image: project5,
+    code: "https://github.com/JuanMG22/material-ui-portfolio",
+    demo: "https://juangonzalez-devportfolio.netlify.app/",
+    delay: 550
   }
 ];
 
