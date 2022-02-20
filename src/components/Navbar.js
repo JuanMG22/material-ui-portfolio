@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
 
 const menuItems = [
   { listIcon: <Home />, listText: "Home", component: Link, listPath: "/", target: "" },
-  { listIcon: <Apps />, listText: "Portfolio", component: Link, listPath: "/portfolio", target: "" },
+  { listIcon: <Apps />, listText: "Projects", component: Link, listPath: "/projects", target: "" },
   { listIcon: <AssignmentInd />, listText: "Resume", component: "a", link: "https://drive.google.com/file/d/1oCj-OKMwi_5yaE_qRHXeo79v43p1exSd/view?usp=sharing", target: "_blank" },
   { listIcon: <ContactMail />, listText: "Contact", component: Link, listPath: "/contact", target: "" },
 ];
