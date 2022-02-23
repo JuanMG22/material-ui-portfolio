@@ -22,8 +22,25 @@ body {
   z-index: 999;
 }
 
+.cv {
+  height: 80vh;
+  width: 40%;
+  position: fixed;
+  z-index: 999;
+  top: 11%;
+  margin-top: "20rem";
+}
+
 @media all and (max-width: 768px) {
   .fondoPortfolio {
     height: 219vh;
+  }
+
+  .cv {
+    height: 80vh;
+    width: 80%;
+    position: fixed;
+    top: 11%;
+    margin-top: "20rem";
   }
 }
