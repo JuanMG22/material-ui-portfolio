@@ -25,7 +25,7 @@ const Resume = () => {
       <Box component="header" className={classes.mainContainer}>
         <Fade duration={1000} delay={500}>
 
-        <iframe className="cv" title="My CV" src="http://docs.google.com/gview?url=https://drive.google.com/u/0/uc?id=1RUOL8Wq36tOBjGC1qOkvTGxBpqK7DSTD&export=download
+        <iframe className="cv" title="My CV" src="http://docs.google.com/gview?url=https://juanmg22.github.io/material-ui-portfolio/src/CV-Juan%20Manuel%20%20Gonz%C3%A1lez.pdf
         &embedded=true" ></iframe>
         </Fade>
       </Box>
