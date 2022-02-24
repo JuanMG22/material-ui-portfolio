@@ -25,8 +25,7 @@ const Resume = () => {
       <Box component="header" className={classes.mainContainer}>
         <Fade duration={1000} delay={500}>
 
-        <iframe className="cv" title="My CV" src="http://docs.google.com/gview?url=https://juanmg22.github.io/material-ui-portfolio/src/CV-Juan%20Manuel%20%20Gonz%C3%A1lez.pdf
-        &embedded=true" ></iframe>
+        <iframe className="cv" title="Juan Manuel Gonzalez CV" src="https://docs.google.com/viewer?srcid=1RUOL8Wq36tOBjGC1qOkvTGxBpqK7DSTD&pid=explorer&efh=false&a=v&chrome=false&embedded=true" width="100%" height="680px"></iframe>
         </Fade>
       </Box>
       <Particles
