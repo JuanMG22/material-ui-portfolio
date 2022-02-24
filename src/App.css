@@ -33,7 +33,7 @@ body {
 
 @media all and (max-width: 768px) {
   .fondoPortfolio {
-    height: 219vh;
+    height: 280vh;
   }
 
   .cv {
