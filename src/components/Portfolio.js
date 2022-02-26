@@ -62,7 +62,7 @@ const projects = [
     description: `Freelance Web page developed for a client that works as sre-devops. Private code`,
     image: project3,
     code: "https://github.com/xdie/webapp",
-    demo: "https://sre.uy/SRE-website/",
+    demo: "https://sre.uy",
     delay: 350
   },
   {
