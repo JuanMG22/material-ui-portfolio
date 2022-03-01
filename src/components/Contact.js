@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     marginTop: "1rem",
-    color: "tomato",
+    color: "tan",
     borderColor: "tan",
   },
   field: {
@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
   particlesCanvas: {
     position: "fixed",
     height: "100vh",
-    opacity: "0.9",
+    opacity: "0.3",
   },
 }));
 
@@ -133,59 +133,50 @@ const Contact = () => {
       </Grid>
 
       <Particles
-        canvasClassName={classes.particlesCanvas}
-        params={{
-          particles: {
-            number: {
-              value: 180,
-              density: {
-                enable: false,
+          canvasClassName={classes.particlesCanvas}
+          params={{
+          "particles": {
+              "number": {
+                  "value": 300,
+                  "density": {
+                      "enable": true,
+                      "value_area": 1500
+                  }
               },
-            },
-            size: {
-              value: 3,
-              random: true,
-              anim: {
-                speed: 4,
-                size_min: 0.3,
+              "line_linked": {
+                  "enable": true,
+                  "opacity": 0.02
               },
-            },
-            line_linked: {
-              enable: false,
-            },
-            move: {
-              random: true,
-              speed: 1,
-              direction: "bottom",
-              out_mode: "out",
-            },
+              "move": {
+                  "random": true,
+                  "speed": 1
+              },
+              "size": {
+                  "value": 2
+              },
+              "opacity": {
+                  "anim": {
+                      "enable": true,
+                      "speed": 1,
+                      "opacity_min": 0.05
+                  }
+              }
           },
-          interactivity: {
-            events: {
-              onhover: {
-                enable: true,
-                mode: "bubble",
+          "interactivity": {
+              "events": {
+                  "onclick": {
+                      "enable": true,
+                      "mode": "push"
+                  }
               },
-              onclick: {
-                enable: true,
-                mode: "repulse",
-              },
-            },
-            modes: {
-              bubble: {
-                distance: 250,
-                duration: 2,
-                size: 0,
-                opacity: 0,
-              },
-              repulse: {
-                distance: 400,
-                duration: 4,
-              },
-            },
+              "modes": {
+                  "push": {
+                      "particles_nb": 1
+                  }
+              }
           },
-        }}
-      />
+          "retina_detect": true
+      }} />
     </Box>
   );
 };

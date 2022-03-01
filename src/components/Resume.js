@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   },
   particlesCanvas: {
     position: "fixed",
-    opacity: "0.3"
+    opacity: "0.5",
   },
 }));
 
@@ -23,53 +23,59 @@ const Resume = () => {
   return (
     <>
       <Box component="header" className={classes.mainContainer}>
-        <Fade duration={1000} delay={500}>
-
-        <iframe className="cv" title="Juan Manuel Gonzalez CV" src="https://docs.google.com/viewer?srcid=1RUOL8Wq36tOBjGC1qOkvTGxBpqK7DSTD&pid=explorer&efh=false&a=v&chrome=false&embedded=true" width="100%" height="680px"></iframe>
+        <Fade duration={500} delay={500}>
+          <iframe
+            className="cv"
+            title="Juan Manuel Gonzalez CV"
+            src="https://docs.google.com/viewer?srcid=1YqQvmsH-yavQjZHPRd4JemN22Nz56AKr&pid=explorer&efh=false&a=v&chrome=false&embedded=true"
+          ></iframe>
         </Fade>
       </Box>
       <Particles
-        canvasClassName={classes.particlesCanvas}
-        params={{
-          particles: {
-            number: {
-              value: 45,
-              density: {
-                enable: true,
-                value_area: 800,
+          canvasClassName={classes.particlesCanvas}
+          params={{
+          "particles": {
+              "number": {
+                  "value": 300,
+                  "density": {
+                      "enable": true,
+                      "value_area": 1500
+                  }
               },
-            },
-            shape: {
-              type: "circle",
-              stroke: {
-                width: 1,
-                color: "tomato",
+              "line_linked": {
+                  "enable": true,
+                  "opacity": 0.02
               },
-            },
-            size: {
-              value: 8,
-              random: true,
-              anim: {
-                enable: false,
-                speed: 6,
-                size_min: 0,
-                sync: true,
+              "move": {
+                  "random": true,
+                  "speed": 1
               },
-            },
-            opacity: {
-              value: 0.5,
-              random: true,
-              anim: {
-                enable: true,
-                speed: 1,
-                opacity_min: 0.1,
-                sync: false,
+              "size": {
+                  "value": 2
               },
-            },
+              "opacity": {
+                  "anim": {
+                      "enable": true,
+                      "speed": 1,
+                      "opacity_min": 0.05
+                  }
+              }
           },
-        }}
-      >
-      </Particles>
+          "interactivity": {
+              "events": {
+                  "onclick": {
+                      "enable": true,
+                      "mode": "push"
+                  }
+              },
+              "modes": {
+                  "push": {
+                      "particles_nb": 1
+                  }
+              }
+          },
+          "retina_detect": true
+      }} />
     </>
   );
 };

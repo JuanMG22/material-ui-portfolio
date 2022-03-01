@@ -7,6 +7,8 @@ import Typed from "react-typed";
 import { makeStyles } from "@material-ui/core/styles";
 import avatar from "../avatar.png";
 import { Fade } from "react-reveal";
+import { Button } from "@material-ui/core";
+import { useNavigate } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   avatar: {
@@ -30,10 +32,23 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     zIndex: 1,
   },
+  buttonContainer: {
+    display: "flex",
+    justifyContent: "center",
+  },
+  button: {
+    margin: "1rem 0.5rem 0 0.5rem",
+    color: "tan",
+    borderColor: "tan",
+  },
 }));
 
 const Header = () => {
   const classes = useStyles();
+
+  const navigate = useNavigate();
+  const goProjects = () => navigate("/projects");
+  const goContact = () => navigate("/contact");
 
   return (
     <Box className={classes.typedContainer} >
@@ -59,6 +74,22 @@ const Header = () => {
           loop
         />
       </Typography>
+      <Box className={classes.buttonContainer}>
+        <Button 
+        className={classes.button}
+        variant="outlined"
+        onClick={goProjects}
+        >
+          Projects
+        </Button>
+        <Button 
+        className={classes.button}
+        variant="outlined"
+        onClick={goContact}
+        >
+          Contact
+        </Button>
+      </Box>
       </Fade>
     </Box>
   );

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Drawer from "@material-ui/core/Drawer";
 import Box from "@material-ui/core/Box";
 import AppBar from "@material-ui/core/AppBar";
@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
   appbar: {
     background: "#222",
     margin: 0,
+    cursor: "pointer",
   },
   arrow: {
     color: "tomato",
@@ -50,14 +51,16 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const menuItems = [
-  { listIcon: <Home />, listText: "Home", component: Link, listPath: "/", target: "" },
-  { listIcon: <Apps />, listText: "Projects", component: Link, listPath: "/projects", target: "" },
-  { listIcon: <AssignmentInd />, listText: "Resume", component: Link, listPath: "/resume", target: "" },
-  { listIcon: <ContactMail />, listText: "Contact", component: Link, listPath: "/contact", target: "" },
+  { listIcon: <Home />, listText: "Home", component: Link, listPath: "/" },
+  { listIcon: <Apps />, listText: "Projects", component: Link, listPath: "/projects" },
+  { listIcon: <AssignmentInd />, listText: "Resume", component: Link, listPath: "/resume" },
+  { listIcon: <ContactMail />, listText: "Contact", component: Link, listPath: "/contact" },
 ];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+  const goHome = () => navigate("/");
 
   const classes = useStyles();
 
@@ -74,8 +77,6 @@ const Navbar = () => {
             onClick={() => setOpen(false)}
             component={item.component}
             to={item.listPath}
-            href={item.link}
-            target={item.target}
           >
             <ListItemIcon className={classes.listItem}>
               {item.listIcon}
@@ -95,7 +96,7 @@ const Navbar = () => {
             <IconButton onClick={() => setOpen(true)}>
               <Menu className={classes.arrow} />
             </IconButton>
-            <Typography variant="h5" className={classes.title}>
+            <Typography variant="h5" className={classes.title} onClick={goHome} >
               Portfolio
             </Typography>
           </Toolbar>

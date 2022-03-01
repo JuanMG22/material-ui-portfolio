@@ -27,15 +27,9 @@ const Footer = () => {
 
   return (
     <BottomNavigation className={classes.bottomNavContainer}>
-      <a href="https://www.linkedin.com/in/juan-manuel-gonz%C3%A1lez-041576218/" rel="noopener noreferrer" target="_blank">
-        <BottomNavigationAction icon={<Linkedin />} className={classes.root} />
-      </a>
-      <a href="https://github.com/JuanMG22" rel="noopener noreferrer" target="_blank">
-        <BottomNavigationAction icon={<GitHub />} className={classes.root} />
-      </a>
-      <a href="https://www.instagram.com/juan.m.gonzalez_/?hl=es-la" rel="noopener noreferrer" target="_blank">
-        <BottomNavigationAction icon={<Instagram />} className={classes.root} />
-      </a>
+      <BottomNavigationAction icon={<Linkedin />} className={classes.root} href="https://www.linkedin.com/in/juan-manuel-gonz%C3%A1lez-041576218/" rel="noopener noreferrer" target="_blank" />
+      <BottomNavigationAction icon={<GitHub />} className={classes.root} href="https://github.com/JuanMG22" rel="noopener noreferrer" target="_blank"/>
+      <BottomNavigationAction icon={<Instagram />} className={classes.root} href="https://www.instagram.com/juan.m.gonzalez_/?hl=es-la" rel="noopener noreferrer" target="_blank" />
     </BottomNavigation>
   );
 };
