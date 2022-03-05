@@ -26,13 +26,13 @@ const useStyles = makeStyles((theme) => ({
   appbar: {
     background: "#222",
     margin: 0,
-    cursor: "pointer",
   },
   arrow: {
     color: "tomato",
   },
   title: {
     color: "tan",
+    cursor: "pointer",
   },
   menuSliderContainer: {
     width: 250,
