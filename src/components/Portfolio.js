@@ -15,6 +15,7 @@ import project2 from "../images/project2.png";
 import project3 from "../images/project3.png";
 import project4 from "../images/project4.png";
 import project5 from "../images/project5.png";
+import project6 from "../images/project6.png";
 import { Fade } from "react-reveal";
 import Particles from "react-particles-js";
 import { Code, Link } from "@material-ui/icons";
@@ -43,44 +44,58 @@ const useStyles = makeStyles((theme) => ({
 const projects = [
   {
     name: "Marty Friedman WebSite",
-    description: `Musical artist WebSite Project in HTML, CSS, SASS, Bootstrap & Vanilla JS. Layout with CSS Grid, Flexbox & animations with AOS`,
+    description: `Musical artist WebSite Project in React, SASS, React Router Dom, React Scroll & SEO with React Helmet. Layout with CSS Grid, Flexbox & animations with AOS`,
     image: project1,
-    code: "https://github.com/JuanMG22/Marty-Friedman-Website",
-    demo: "https://juanmg22.github.io/Marty-Friedman-Website/",
-    delay: 150
-  },
-  {
-    name: "High Gaming E-commerce",
-    description: `E-commerce Project in JavaScript, using Bootstrap, Sweet Alert2, jQuery, local storage for save the cart & more`,
-    image: project2,
-    code: "https://github.com/JuanMG22/High-Gaming",
-    demo: "https://juanmg22.github.io/High-Gaming/",
-    delay: 250
-  },
-  {
-    name: "Sre Consulting and Devops",
-    description: `Freelance Web page developed for a client that works as sre-devops. Private code`,
-    image: project3,
-    code: "https://github.com/xdie/webapp",
-    demo: "https://sre.uy",
-    delay: 350
+    code: "https://github.com/JuanMG22/marty-friedman-website-react",
+    demo: "https://marty-friedman.netlify.app/",
+    delay: 150,
+    id: 1
   },
   {
     name: "Guitar Shop React E-commerce",
     description: `E-commerce Project in React, using TailwindCSS, Sweet Alert2, useState, useEffect, ContextAPI, React Router Dom & more`,
-    image: project4,
+    image: project2,
     code: "https://github.com/JuanMG22/guitar-shop",
     demo: "https://guitar-shop-react.netlify.app/",
-    delay: 450
+    delay: 250,
+    id: 2
+  },
+  {
+    name: "High Gaming E-commerce",
+    description: `E-commerce Project in JavaScript, using Bootstrap, Sweet Alert2, jQuery, local storage for save the cart & more`,
+    image: project3,
+    code: "https://github.com/JuanMG22/High-Gaming",
+    demo: "https://juanmg22.github.io/High-Gaming/",
+    delay: 350,
+    id: 3
+  },
+  {
+    name: "Notes App",
+    description: `Notes App, full stack project. Frontend with React and TailwindCSS. Backend with Nodejs, Express and MongoDB database`,
+    image: project4,
+    code: "https://github.com/JuanMG22/notes-app-react",
+    demo: "https://aplicacion-notas.netlify.app/",
+    delay: 450,
+    id: 4
+  },
+  {
+    name: "Sre Consulting and Devops",
+    description: `Freelance Web page developed for a client that works as sre-devops. Private code`,
+    image: project5,
+    code: "https://github.com/xdie/webapp",
+    demo: "https://sre.uy",
+    delay: 550,
+    id: 5
   },
   {
     name: "Personal Portfolio",
     description: `Developer Portfolio Project in React, using Material UI, React Particles Js, React Reveal, React Router DOM & more`,
-    image: project5,
+    image: project6,
     code: "https://github.com/JuanMG22/material-ui-portfolio",
-    demo: "https://juangonzalez-devportfolio.netlify.app/",
-    delay: 550
-  }
+    demo: "https://juangonzalez.netlify.app/",
+    delay: 650,
+    id: 6
+  },
 ];
 
 const Portfolio = () => {
@@ -134,8 +149,8 @@ const Portfolio = () => {
       }} />
       <Grid container justify="center">
         {/* Projects */}
-        {projects.map((project, i) => (
-          <Grid item xs={12} sm={8} md={6} lg={4} key={i}>
+        {projects.map((project) => (
+          <Grid item xs={12} sm={8} md={6} lg={4} key={project.id}>
             <Fade duration={1000} delay={project.delay}>
             <Card className={`${classes.cardContainer} cardContainer`}>
               <CardActionArea>
