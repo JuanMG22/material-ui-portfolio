@@ -27,7 +27,7 @@ const Resume = () => {
           <iframe
             className="cv"
             title="Juan Manuel Gonzalez CV"
-            src="https://docs.google.com/viewer?srcid=1YqQvmsH-yavQjZHPRd4JemN22Nz56AKr&pid=explorer&efh=false&a=v&chrome=false&embedded=true"
+            src="https://docs.google.com/viewer?srcid=1wuayb9Wt2hQQQkHxw0zYTTa6sk1cTrMh&pid=explorer&efh=false&a=v&chrome=false&embedded=true"
           ></iframe>
         </Fade>
       </Box>

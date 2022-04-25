@@ -15,7 +15,6 @@ import project2 from "../images/project2.png";
 import project3 from "../images/project3.png";
 import project4 from "../images/project4.png";
 import project5 from "../images/project5.png";
-import project6 from "../images/project6.png";
 import { Fade } from "react-reveal";
 import Particles from "react-particles-js";
 import { Code, Link } from "@material-ui/icons";
@@ -52,21 +51,21 @@ const projects = [
     id: 1
   },
   {
+    name: "Banco Digital",
+    description: `Banco Digital, full stack web & PWA project. Frontend with React and TailwindCSS. Backend with Nodejs, Express and MongoDB database`,
+    image: "https://user-images.githubusercontent.com/88951217/164337251-a9f6f58a-0eaa-4ec6-a420-9cc43d53c688.png",
+    code: "https://github.com/No-Country/C4-G16-T-Client",
+    demo: "https://banco-digital.netlify.app/",
+    delay: 650,
+    id: 2
+  },
+  {
     name: "Guitar Shop React E-commerce",
     description: `E-commerce Project in React, using TailwindCSS, Sweet Alert2, useState, useEffect, ContextAPI, React Router Dom & more`,
     image: project2,
     code: "https://github.com/JuanMG22/guitar-shop",
     demo: "https://guitar-shop-react.netlify.app/",
     delay: 250,
-    id: 2
-  },
-  {
-    name: "High Gaming E-commerce",
-    description: `E-commerce Project in JavaScript, using Bootstrap, Sweet Alert2, jQuery, local storage for save the cart & more`,
-    image: project3,
-    code: "https://github.com/JuanMG22/High-Gaming",
-    demo: "https://juanmg22.github.io/High-Gaming/",
-    delay: 350,
     id: 3
   },
   {
@@ -79,23 +78,23 @@ const projects = [
     id: 4
   },
   {
+    name: "High Gaming E-commerce",
+    description: `E-commerce Project in JavaScript, using Bootstrap, Sweet Alert2, jQuery, local storage for save the cart & more`,
+    image: project3,
+    code: "https://github.com/JuanMG22/High-Gaming",
+    demo: "https://juanmg22.github.io/High-Gaming/",
+    delay: 350,
+    id: 5
+  },
+  {
     name: "Sre Consulting and Devops",
     description: `Freelance Web page developed for a client that works as sre-devops. Private code`,
     image: project5,
     code: "https://github.com/xdie/webapp",
     demo: "https://sre.uy",
     delay: 550,
-    id: 5
-  },
-  {
-    name: "Personal Portfolio",
-    description: `Developer Portfolio Project in React, using Material UI, React Particles Js, React Reveal, React Router DOM & more`,
-    image: project6,
-    code: "https://github.com/JuanMG22/material-ui-portfolio",
-    demo: "https://juangonzalez.netlify.app/",
-    delay: 650,
     id: 6
-  },
+  }
 ];
 
 const Portfolio = () => {
