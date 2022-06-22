@@ -15,7 +15,7 @@ import project2 from "../images/project2.png";
 import project3 from "../images/project3.png";
 import project4 from "../images/project4.png";
 import project5 from "../images/project5.png";
-import { Fade } from "react-reveal";
+import { Fade } from "react-reveal"; 
 import Particles from "react-particles-js";
 import { Code, Link } from "@material-ui/icons";
 
@@ -48,16 +48,17 @@ const projects = [
     code: "https://github.com/JuanMG22/marty-friedman-website-react",
     demo: "https://marty-friedman.netlify.app/",
     delay: 150,
-    id: 1
+    id: 1,
   },
   {
     name: "Banco Digital",
     description: `Banco Digital, full stack web & PWA project. Frontend with React and TailwindCSS. Backend with Nodejs, Express and MongoDB database`,
-    image: "https://user-images.githubusercontent.com/88951217/164337251-a9f6f58a-0eaa-4ec6-a420-9cc43d53c688.png",
+    image:
+      "https://user-images.githubusercontent.com/88951217/164337251-a9f6f58a-0eaa-4ec6-a420-9cc43d53c688.png",
     code: "https://github.com/No-Country/C4-G16-T-Client",
     demo: "https://banco-digital.netlify.app/",
-    delay: 650,
-    id: 2
+    delay: 250,
+    id: 2,
   },
   {
     name: "Guitar Shop React E-commerce",
@@ -65,8 +66,8 @@ const projects = [
     image: project2,
     code: "https://github.com/JuanMG22/guitar-shop",
     demo: "https://guitar-shop-react.netlify.app/",
-    delay: 250,
-    id: 3
+    delay: 350,
+    id: 3,
   },
   {
     name: "Notes App",
@@ -75,7 +76,7 @@ const projects = [
     code: "https://github.com/JuanMG22/notes-app-react",
     demo: "https://aplicacion-notas.netlify.app/",
     delay: 450,
-    id: 4
+    id: 4,
   },
   {
     name: "High Gaming E-commerce",
@@ -83,16 +84,16 @@ const projects = [
     image: project3,
     code: "https://github.com/JuanMG22/High-Gaming",
     demo: "https://juanmg22.github.io/High-Gaming/",
-    delay: 350,
-    id: 5
+    delay: 550,
+    id: 5,
   },
   {
-    name: "Sre Consulting and Devops",
-    description: `Freelance Web page developed for a client that works as sre-devops. Private code`,
+    name: "NG Ambiental",
+    description: `Freelance Web page developed for a client that works as environmental auditor`,
     image: project5,
-    code: "https://github.com/xdie/webapp",
-    demo: "https://sre.uy",
-    delay: 550,
+    code: "https://github.com/JuanMG22/ng-ambiental",
+    demo: "https://ng-ambiental.netlify.app/",
+    delay: 650,
     id: 6
   }
 ];
