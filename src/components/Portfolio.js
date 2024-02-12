@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
   },
   cardContainer: {
     maxWidth: 345,
-    margin: "2.3rem auto",
+    margin: "1rem auto",
     overflow: "hidden",
     transition: "ease all .3s"
   },

@@ -10,7 +10,7 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  height: 100%;
+  height: calc(100vh - 64px);
 }
 
 .fondoContact {
